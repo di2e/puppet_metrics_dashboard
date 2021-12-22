@@ -11,7 +11,7 @@ define puppet_metrics_dashboard::certs(
   $service = $name
 ){
 
-  $ssl_dir        = '/var/lib/puppet/ssl/certs'
+  $ssl_dir        = '/var/lib/puppet/ssl'
   $cert_dir       = "/etc/${service}"
   $client_pem_key = "${ssl_dir}/private_keys/${trusted['certname']}.pem"
   $client_cert    = "${ssl_dir}/certs/${trusted['certname']}.pem"
